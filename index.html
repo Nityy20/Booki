@@ -22,8 +22,12 @@
                 </a>
             </div>
             <nav class="navbar-links">
-                <a href="#" class="nav-link">Hébergements</a>  <!-- Je n'ai pas fait de seconde page -->
-                <a href="#" class="nav-link">Activités</a>  <!-- Je n'ai pas fait de seconde page -->
+                <div class="left-section">
+                    <a href="#" class="nav-link">Hébergements</a>  <!-- Je n'ai pas fait de seconde page -->
+                </div>
+                <div class="right-section">
+                    <a href="#" class="nav-link">Activités</a>  <!-- Je n'ai pas fait de seconde page -->
+                </div>
             </nav>
         </header>
     
@@ -40,32 +44,34 @@
                     <i class="fa-solid fa-location-dot search-icon"></i> 
                 </div>
                     <input type="text" id="destination" name="destination" placeholder="Marseille, France" class="search-input">
-                    <button type="submit" class="search-button">Rechercher</button>
-                    <!-- <i class="fa-solid fa-magnifying-glass search-icon-mobile"></i> 
-                     </button>-->
+                    <button type="submit" class="search-button">
+                        <span class="search-texte">Rechercher</span>
+                        <span class="search-icon-loop"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
             </form>
             <div class="filter-container">
                 <span class="filter-label">Filtres</span>
-                
-                <div class="filter">
-                    <i class="fa-solid fa-money-bill-wave filter-icon"></i>
-                    <span class="filter-text">Économique</span>
-                </div>
+                <div class="filter-items-container"> 
+                    <div class="filter">
+                        <i class="fa-solid fa-money-bill-wave filter-icon"></i>
+                        <span class="filter-text">Économique</span>
+                    </div>
 
-                <div class="filter">
-                    <i class="fa-solid fa-person filter-icon"></i>
-                    <span class="filter-text">Familial</span>
-                </div>
-                  
-                <div class="filter">
-                    <i class="fa-solid fa-heart filter-icon"></i>
-                    <span class="filter-text">Romantique</span>
-                </div>
-                  
-                <div class="filter">
-                    <i class="fa-solid fa-fire filter-icon"></i>
-                    <span class="filter-text">Nos pépites</span>
-                </div>
+                    <div class="filter">
+                        <i class="fa-solid fa-person filter-icon"></i>
+                        <span class="filter-text">Familial</span>
+                    </div>
+                    
+                    <div class="filter">
+                        <i class="fa-solid fa-heart filter-icon"></i>
+                        <span class="filter-text">Romantique</span>
+                    </div>
+                    
+                    <div class="filter">
+                        <i class="fa-solid fa-fire filter-icon"></i>
+                        <span class="filter-text">Nos pépites</span>
+                    </div>
+                </div> 
             </div>
             <div class="infos">
                 <i class="fa-solid fa-info infos-icon"></i>
