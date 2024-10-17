@@ -37,13 +37,16 @@ html, body {
     margin-top: 15px;
 }
 
-
-.navbar-links {
+/* Ajoute la classe pour l'ul et retire les marges et les puces */
+.navbar-list {
     display: flex;
     gap: 50px;
     height: 100%;
     font-size: 15px;
     margin-top: 15px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .navbar-links .nav-link {
@@ -54,21 +57,22 @@ html, body {
     margin-right: 10px;
 }
 
-
 .navbar-links .nav-link:hover {
     color: #0065FC; 
 }
 
-
-.left-section .right-section:hover::after {
+.navbar-links .nav-link:hover::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 53px; 
+    bottom: 26px;
     height: 2px;
+    width: 100%; /* Limite le soulignement à la largeur du lien */
     background: #0065FC;
 }
+
+
 
 
 .search-section-container {
@@ -510,6 +514,7 @@ footer {
     }
 
     .navbar {
+        display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;
@@ -517,7 +522,7 @@ footer {
         border-bottom: 2px solid #E0E0E0;
         padding-bottom: 10px;
     }
-
+    
     .navbar-logo .logo {
         margin: 0;
         display: flex;
@@ -525,19 +530,28 @@ footer {
         justify-content: center;
         padding: 20px 0;
     }
-
+    
     .navbar-links {
         display: flex;
         width: 100%;
         max-width: 767.98px;
     }
-
+    
+    /* Remplace les div par ul/li */
+    .navbar-list {
+        display: flex;
+        width: 100%;
+        justify-content: space-around; /* Pour centrer les liens */
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    
     .left-section, .right-section {
         display: flex;
         flex: 1; 
         justify-content: center; 
         align-items: center;
-
     }
     
     .navbar-links .nav-link {
@@ -548,22 +562,39 @@ footer {
         position: relative;
         padding: 0 10px;
     }
-
+    
     .navbar-links .nav-link:hover {
         color: #0065FC; 
     }
+
+    .navbar-links .nav-link:hover::after {
+        display: none !important; /* Désactive la barre du hover en responsive */
+    }
     
-    
-    .left-section .right-section:hover::after {
+    /* Soulignement pour la moitié de la largeur à gauche (Hébergements) */
+    .left-section:hover::after {
         content: "";
         display: block;
-        width: 100%;
+        width: 50%; /* Prend la moitié de la largeur */
         height: 2px;
         background-color: #0065FC;
         position: absolute;
-        bottom: -12px;
-        left: 0;
+        bottom: -2px;
+        left: 0; /* Soulignement commence à gauche */
     }
+    
+    /* Soulignement pour la moitié de la largeur à droite (Activités) */
+    .right-section:hover::after {
+        content: "";
+        display: block;
+        width: 50%; /* Prend la moitié de la largeur */
+        height: 2px;
+        background-color: #0065FC;
+        position: absolute;
+        bottom: -2px;
+        right: 0; /* Soulignement commence à droite */
+    } 
+
 
     .search-section-container {
         display: flex;
