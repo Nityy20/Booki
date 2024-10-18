@@ -37,7 +37,6 @@ html, body {
     margin-top: 15px;
 }
 
-/* Ajoute la classe pour l'ul et retire les marges et les puces */
 .navbar-list {
     display: flex;
     gap: 50px;
@@ -171,7 +170,6 @@ html, body {
 .filter {
     display: flex;
     align-items: center;
-    gap: 10px;
     padding: 8px 15px;
     border-radius: 20px;
     border: 2px solid #ccc;
@@ -187,6 +185,7 @@ html, body {
 .filter-text {
     font-weight: bold;
     font-size: 16px;
+    padding-left: 10px;
 }
 
 .filter:hover {
@@ -542,7 +541,7 @@ footer {
         display: flex;
         width: 100%;
         justify-content: space-around; /* Pour centrer les liens */
-        padding: 0;
+        padding: 0 15px;
         margin: 0;
         list-style-type: none;
     }
@@ -616,9 +615,19 @@ footer {
         align-self: center;
         background-color: #f2f2f2;
         height: 49px;
-        border-radius: 20px;
+        border-radius: 15px;
         overflow: hidden;
         margin: 15px 0px;
+    }
+
+    .search-input {
+        border: none;
+        background-color: white;
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+        text-align: left;
+        padding: 14px 10px;
     }
 
     .search-button {
@@ -676,18 +685,26 @@ footer {
     .filter {
         display: flex;
         align-items: center;
-        padding: 8px 20px;
-        height: auto;
-        width: 115px;
-        border-radius: 20px; 
-        border: 2px solid #ccc; 
+        padding: 0px 20px;
+        width: 118px;
+        height: 46px;
+        border-radius: 30px;
+        border: 2px solid #ccc;
         cursor: pointer;
+        gap: 0;
+    }
+
+    .filter-icon {
+        display: flex;
+        font-size: 20px;
+        align-items: center;
     }
 
     /* Texte des filtres */
     .filter-text {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
+        padding-left: 10px;
     }
 
 
